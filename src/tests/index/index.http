@@ -1,0 +1,8 @@
+@url = https://expert-orbit-666qp4x6p5p34j9w-8080.app.github.dev/
+GET {{url}}
+
+###
+POST {{url}}
+Content-Type: text/plain
+
+Uva
