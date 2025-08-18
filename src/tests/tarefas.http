@@ -1,0 +1,8 @@
+@url = https://sturdy-space-succotash-j66vgqp697rc5467-8080.app.github.dev/
+
+POST {{url}}
+Content-Type: application/json
+
+{
+    "descricao" : "teste",
+}
