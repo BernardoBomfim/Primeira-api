@@ -18,7 +18,7 @@ import application.model.Aluno;
 import application.repository.AlunoRepository;
 
 @RestController
-@RequestMapping("/Aluno")
+@RequestMapping("/alunos")
 
 public class AlunoController{
     @Autowired
@@ -39,7 +39,7 @@ public class AlunoController{
         Optional<Aluno> resultado = alunoRepo.findById(id);
         if(resultado.isEmpty()){
             throw new ResponseStatusException(
-                HttpStatus.NOT_FOUND, "tarefa não encontrada"
+                HttpStatus.NOT_FOUND, "Aluno não encontrado"
             );
         }
         return resultado.get();
@@ -51,11 +51,12 @@ public class AlunoController{
 
             if(resultado.isEmpty()){
             throw new ResponseStatusException(
-                HttpStatus.NOT_FOUND, "tarefa não encontrada"
+                HttpStatus.NOT_FOUND, "Aluno não encontrada"
             );
         }
-
-        resultado.get().setNome(novosDados.getNome());
+            resultado.get().setIdade(novosDados.getIdade());
+            resultado.get().setNome(novosDados.getNome());
+            
             return alunoRepo.save (resultado.get());
     }
 
@@ -63,7 +64,7 @@ public class AlunoController{
     public void remove(@PathVariable long id) {
         if(!alunoRepo.existsById(id)){
             throw new ResponseStatusException(
-                HttpStatus.NOT_FOUND, "tarefa não encontrada");
+                HttpStatus.NOT_FOUND, "Aluno não encontrada");
         }
         alunoRepo.deleteById(id);
     }

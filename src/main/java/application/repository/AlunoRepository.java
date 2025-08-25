@@ -4,6 +4,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import application.model.Aluno;
 
-public interface TarefaRepository extends JpaRepository <Aluno, Long> {
+public interface AlunoRepository extends JpaRepository <Aluno, Long> {
 
 }
