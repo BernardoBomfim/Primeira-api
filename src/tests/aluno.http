@@ -4,7 +4,7 @@ POST {{url}}
 Content-Type: application/json
 
 {
-    "nome" : "joao",
+    "nome" : "jorge",
     "idade" : 20
 }
 
@@ -18,10 +18,10 @@ PUT {{url}}/2
 Content-Type: application/json
 
 {
-    "nome" : "diego",
+    "nome" : "pedro",
     "idade" : 19
 }
 
 ###
 
-DELETE {{url}}
+DELETE {{url}}/3
